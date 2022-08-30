@@ -1,0 +1,35 @@
+SC:
+erd1qqqqqqqqqqqqqpgqvg9gzjrq83jlk7g3hrf2w38h35w0ym8vk7hq7gkf74
+
+
+0.26675939694
+48.590561258845
+
+48.857320656
+48.855926170725
+
+#############################################################
+### claim rewards erdpy cmd snippet
+#############################################################
+
+erdpy --verbose contract call erd1qqqqqqqqqqqqqpgqvg9gzjrq83jlk7g3hrf2w38h35w0ym8vk7hq7gkf74 --function="ClaimDeveloperRewards" --chain="D" --pem="/home/anon/Desktop/dapp/wallet/test.pem" --gas-limit=80000000 --proxy="https://devnet-gateway.elrond.com"  --recall-nonce --send 
+
+
+
+#############################################################
+### proactive, pre-youtube demo, dapp SC that had more 
+### rewards per automated transactions 
+### erd1qqqqqqqqqqqqqpgq8hqpkgtudcxl6m30q46786ycq0nhqz5vk7hq7nfxv8
+#############################################################
+
+erdpy --verbose contract call erd1qqqqqqqqqqqqqpgq8hqpkgtudcxl6m30q46786ycq0nhqz5vk7hq7nfxv8 --function="ClaimDeveloperRewards" --chain="D" --pem="/home/anon/Desktop/dapp/wallet/test.pem" --gas-limit=80000000 --proxy="https://devnet-gateway.elrond.com"  --recall-nonce --send 
+
+#############################################################
+### mainnet maiar.exchange smart contracts to see rewards on:
+#############################################################
+
+https://explorer.elrond.com/accounts/erd1qqqqqqqqqqqqqpgqrc4pg2xarca9z34njcxeur622qmfjp8w2jps89fxnl
+https://explorer.elrond.com/accounts/erd1qqqqqqqqqqqqqpgqjpt0qqgsrdhp2xqygpjtfrpwf76f9nvg2jpsg4q7th
+https://explorer.elrond.com/accounts/erd1qqqqqqqqqqqqqpgq7qhsw8kffad85jtt79t9ym0a4ycvan9a2jps0zkpen
+https://explorer.elrond.com/accounts/erd1qqqqqqqqqqqqqpgqa0fsfshnff4n76jhcye6k7uvd7qacsq42jpsp6shh2
+https://explorer.elrond.com/accounts/erd1qqqqqqqqqqqqqpgqyawg3d9r4l27zue7e9sz7djf7p9aj3sz2jpsm070jf

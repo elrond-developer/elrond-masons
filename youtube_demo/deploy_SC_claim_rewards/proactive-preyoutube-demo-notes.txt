@@ -1,0 +1,69 @@
+#############################################################
+### the directory to be in when deploying the SC
+#############################################################
+
+anon@anon-vm:~/Desktop/dapp/ping-pong-contract/ping-pong$ erdpy contract deploy
+
+#############################################################
+### location of where on the ping-pong smart contract I 
+### needed to change the amount to 6 eGLD and the seconds
+#############################################################
+
+/home/anon/Desktop/dapp/ping-pong-contract/ping-pong/erdpy.json
+
+#############################################################
+### location of where on the amount to 6 eGLD and adding the
+### pong gas fee value that caused errors
+#############################################################
+
+/home/anon/Desktop/dapp/dapp/src/pages/Dashboard/Actions/index.tsx
+
+
+#############################################################
+### SC 1st test:
+### erd1qqqqqqqqqqqqqpgq8hqpkgtudcxl6m30q46786ycq0nhqz5vk7hq7nfxv8
+#############################################################
+
+#############################################################
+### SC 2nd test:
+### erd1qqqqqqqqqqqqqpgqpesvgapznljk3gtgq50t9l86m6axgy9sk7hqutvcg0
+#############################################################
+
+anon@anon-vm:~/Desktop/dapp/dapp$ npm run start
+
+#############################################################
+### errors from the dapp template about gas when ponging
+### i used this erdpy command at the beginning until i was 
+### able to figure out where on the react dapp i had to fix 
+### the pong gas value
+#############################################################
+
+erdpy --verbose contract call  erd1qqqqqqqqqqqqqpgqpesvgapznljk3gtgq50t9l86m6axgy9sk7hqutvcg0 --function="pong"  --chain="D" --pem="/home/anon/Desktop/dapp/wallet/test.pem" --gas-limit=80000000 --proxy="https://devnet-gateway.elrond.com"  --recall-nonce --send 
+
+49.88639161906
+
+
+#############################################################
+### ClaimDeveloperRewards
+#############################################################
+
+erdpy --verbose contract call erd1qqqqqqqqqqqqqpgqpesvgapznljk3gtgq50t9l86m6axgy9sk7hqutvcg0 --function="ClaimDeveloperRewards" --chain="D" --pem="/home/anon/Desktop/dapp/wallet/test.pem" --gas-limit=80000000 --proxy="https://devnet-gateway.elrond.com"  --recall-nonce --send 
+
+49.885937848835
+
+#############################################################
+### pong command to use for automated script against SC
+#############################################################
+
+erdpy --verbose contract call  erd1qqqqqqqqqqqqqpgq8hqpkgtudcxl6m30q46786ycq0nhqz5vk7hq7nfxv8 --function="pong"  --chain="D" --pem="/home/anon/Desktop/dapp/wallet/test.pem" --gas-limit=80000000 --proxy="https://devnet-gateway.elrond.com"  --recall-nonce --send 
+
+#############################################################
+### ping command to use for automated script against SC
+#############################################################
+erdpy --verbose contract call  erd1qqqqqqqqqqqqqpgq8hqpkgtudcxl6m30q46786ycq0nhqz5vk7hq7nfxv8 --function="ping" --arguments="6000000000000000000" --chain="D" --pem="/home/anon/Desktop/dapp/wallet/test.pem" --gas-limit=80000000 --proxy="https://devnet-gateway.elrond.com"  --recall-nonce --send 
+
+### works ping
+erdpy --verbose contract call  erd1qqqqqqqqqqqqqpgq8hqpkgtudcxl6m30q46786ycq0nhqz5vk7hq7nfxv8 --function="ping" --value="6000000000000000000" --chain="D" --pem="/home/anon/Desktop/dapp/wallet/test.pem" --gas-limit=80000000 --proxy="https://devnet-gateway.elrond.com"  --recall-nonce --send
+
+
+0.2663 XeGLD
