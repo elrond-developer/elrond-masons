@@ -37,9 +37,21 @@ lines 8 - 19:
 erdpy contract deploy
 
 #############################################################
-### location of where on the amount to 6 eGLD and adding the
-### pong gas fee value that caused errors
+### location on react app of where to change the SC address, 
+### change the amount to 6 eGLD, adding the pong gas fee 
+### value that caused errors
 #############################################################
+
+### path to change smart contract that react app attaches to
+/home/anon/Desktop/dapp_demo2/dapp/src/config.tsx
+
+line 2
+export const contractAddress =
+  'erd1qqqqqqqqqqqqqpgqvg9gzjrq83jlk7g3hrf2w38h35w0ym8vk7hq7gkf74';
+
+export const dAppName = 'example Dapp';
+
+### path to egld value to send and gas fees
 
 /home/anon/Desktop/dapp/dapp/src/pages/Dashboard/Actions/index.tsx
 
