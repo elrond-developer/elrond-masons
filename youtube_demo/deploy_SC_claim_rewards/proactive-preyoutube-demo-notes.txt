@@ -1,15 +1,40 @@
 #############################################################
-### the directory to be in when deploying the SC
+### the directory to be in when building & deploying the SC
 #############################################################
 
-anon@anon-vm:~/Desktop/dapp/ping-pong-contract/ping-pong$ erdpy contract deploy
+anon@anon-vm:~/Desktop/dapp/ping-pong-contract/ping-pong$ 
+
+### build contract 
+
+anon@anon-vm:~/Desktop/dapp/ping-pong-contract/ping-pong$ erdpy contract build
 
 #############################################################
 ### location of where on the ping-pong smart contract I 
 ### needed to change the amount to 6 eGLD and the seconds
 #############################################################
 
+### location to change values in erdpy.json:
+
 /home/anon/Desktop/dapp/ping-pong-contract/ping-pong/erdpy.json
+
+### Change values in arguments and pem wallet path:
+
+lines 8 - 19:
+    "contract":{
+        "deploy":{
+            "verbose": true,
+            "bytecode": "output/ping-pong.wasm",
+            "recall-nonce": true,
+            "pem": "../../wallet/test.pem",
+            "gas-limit": 80000000,
+            "arguments": [6000000000000000000, 15],
+            "send": true,
+            "outfile": "deploy-testnet.interaction.json"
+        }
+     }
+
+### deploy contract after changes
+erdpy contract deploy
 
 #############################################################
 ### location of where on the amount to 6 eGLD and adding the
@@ -18,6 +43,25 @@ anon@anon-vm:~/Desktop/dapp/ping-pong-contract/ping-pong$ erdpy contract deploy
 
 /home/anon/Desktop/dapp/dapp/src/pages/Dashboard/Actions/index.tsx
 
+### changing value of ping to match SC
+line 87
+  const sendPingTransaction = async () => {
+    const pingTransaction = {
+      value: '6000000000000000000',
+      data: 'ping',
+      receiver: contractAddress,
+      gasLimit: '60000000'
+    };
+
+### add pong gas fees
+line 113:
+ const sendPongTransaction = async () => {
+    const pongTransaction = {
+      value: '0',
+      data: 'pong',
+      receiver: contractAddress,
+      gasLimit: '60000000'
+    };
 
 #############################################################
 ### SC 1st test:
