@@ -172,7 +172,7 @@ erdpy --verbose contract call  erd1qqqqqqqqqqqqqpgqrglfe8k475aaj2uxcl5p8jjwjumkh
 ###### ########################################################
 # SENDING ESDT TOKENS FROM PERSONAL -> MSC
 # 
-### from MSC -> board member personal wallet
+### from board member personal wallet -> MSC
 ###### ########################################################
 ESDTTransfer@44414e472d663235626233@d3c21bcecceda1000000
 
