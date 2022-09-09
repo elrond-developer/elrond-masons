@@ -1,0 +1,28 @@
+{
+    "configurations": {
+        "default": {
+            "proxy": "https://devnet-api.elrond.com",
+            "chainID": "D"
+        }
+    },
+    "contract":{
+        "deploy":{
+            "verbose": true,
+            "bytecode": "output/multisig.wasm",
+            "recall-nonce": true,
+            "pem": "../wallets/Aadam/Aadam.pem",
+            "gas-limit": 180000000,
+            "arguments": [
+                "0x03", 
+                "erd1z4y3lten76yz6syk4mk3xla3ag4zw5nv7yatlrq9gn80925qzxps4sx50m",
+                "erd1kets4zcgm09sejgj68k4qnjxmve6kr79cpf5yk5xumzdmk3tmydsxr2a6f",
+                "erd19n9u9yrsztg8xx9hvszsgxrp62xwv0mj6u3jvxy88vqp68a0d3tsr0ae2e",
+                "erd10myyrg89fzvs7l67p5d38xnmvfxt7gkk0vtwj3jlgerddd856eysrr2a24"
+            ],
+            "send": true,
+            "outfile": "multisig.json",
+            "metadata-payable": true,
+            "metadata-payable-by-sc": true
+        }
+     }
+}
